@@ -1,0 +1,18 @@
+{
+  "name": "connect-redis-autoconfig",
+  "version": "0.1.0",
+  "description": "Auto configuring redis session storage for connect/express/kraken",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://git@github.com:oblador/connect-redis-autoconfig.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joel Arvidsson",
+  "license": "MIT",
+  "dependencies": {
+    "connect-redis": ">=1.4.0"
+  }
+}
