@@ -1,12 +1,13 @@
 var RedisStore = require('connect-redis');
 var url = require('url');
+var util = require('util');
 var envVariables = ['REDIS_SESSION_URI', 'REDIS_URI', 'REDIS_SESSION_URL', 'REDIS_URL', 'REDISTOGO_URL', 'OPENREDIS_URL'];
 var fallback = 'redis://localhost:6379'
 
 module.exports = function(connect){
   var store = RedisStore(connect);
 
-  function KrakenRedisStore (options) {
+  function AutoconfigRedisStore (options) {
     if(!options) {
       options = {};
     } else if(typeof options === 'string') {
@@ -35,6 +36,6 @@ module.exports = function(connect){
     }
     store.call(this, options);
   }
-  KrakenRedisStore.prototype = store.prototype;
-  return KrakenRedisStore;
+  util.inherits(AutoconfigRedisStore, store);
+  return AutoconfigRedisStore;
 };
