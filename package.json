@@ -1,6 +1,6 @@
 {
   "name": "connect-redis-autoconfig",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Auto configuring redis session storage for connect/express/kraken",
   "main": "index.js",
   "repository": {
