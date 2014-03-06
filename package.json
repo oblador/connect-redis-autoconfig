@@ -13,6 +13,6 @@
   "author": "Joel Arvidsson",
   "license": "MIT",
   "dependencies": {
-    "connect-redis": ">=1.4.0"
+    "connect-redis": "1.4.6"
   }
 }
